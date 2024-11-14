@@ -1,4 +1,5 @@
-import { Task } from "./TodoApp";
+import { Task } from "../TodoApp";
+import "./Task.css";
 
 type Props = {
   task: Task;
@@ -8,11 +9,11 @@ type Props = {
 const TaskComponent = ({ task, deleteTask }: Props) => {
   const getClassByPriority = (priority: Task["priority"]): string => {
     switch (priority) {
-      case "normal":
+      case "Normal":
         return "bg-light text-dark";
-      case "urgente":
+      case "Urgente":
         return "bg-warning text-dark";
-      case "muy-urgente":
+      case "Muy urgente":
         return "bg-danger text-white";
       default:
         return "bg-secondary text-white";
@@ -23,7 +24,7 @@ const TaskComponent = ({ task, deleteTask }: Props) => {
     <div className={`card ${getClassByPriority(task.priority)}`}>
       <div className="card-body">
         <p className="card-text">{task.description}</p>
-        <strong>Prioridad: {task.priority}</strong>
+        <strong className="priority">Prioridad: {task.priority}</strong>
         <button className="btn-delete-task btn btn-danger" onClick={deleteTask}>
           Borrar
         </button>

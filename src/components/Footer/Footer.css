@@ -1,0 +1,19 @@
+.footer {
+  padding: 10% 0 10% 0;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+  margin-top: 5%;
+}
+
+.footer-p {
+  color: #f0ffff;
+  margin: 10px 10px 10px 0;
+}
+
+.logo-footer {
+  width: 30px;
+  height: 30px;
+}

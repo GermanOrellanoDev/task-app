@@ -1,0 +1,25 @@
+.card {
+  width: 20%;
+  height: auto;
+  margin: 0.6rem;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-text {
+  height: 2rem;
+}
+
+.priority {
+  height: 2rem;
+}
+
+.btn-delete-task {
+  width: 40%;
+  height: 30%;
+  background-color: rgb(190, 40, 40);
+  border: none;
+}

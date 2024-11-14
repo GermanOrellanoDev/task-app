@@ -1,5 +1,6 @@
-import { Task } from "./TodoApp";
-import TaskComponent from "./Task";
+import { Task } from "../TodoApp";
+import TaskComponent from "../Task/Task";
+import "./TaskList.css";
 
 type Props = {
   taskList: Task[];
