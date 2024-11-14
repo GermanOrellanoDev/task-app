@@ -1,7 +1,17 @@
 import { useState } from "react";
-import TaskList from "./TaskList";
+import TaskList from "./TaskList/TaskList";
 
-type Priority = "normal" | "urgente" | "muy-urgente";
+declare const Swal: {
+  fire: (options: {
+    icon: "success" | "error" | "warning" | "info" | "question";
+    title: string;
+    text?: string;
+    timer: number;
+    showConfirmButton?: false | true;
+  }) => Promise<any>;
+};
+
+type Priority = "Normal" | "Urgente" | "Muy urgente";
 
 export interface Task {
   id: number;
@@ -14,20 +24,33 @@ const TodoApp = () => {
 
   const [taskList, setTaskList] = useState<Task[]>([]);
 
-  const [selectedPriotiry, setSelectedPriority] = useState<Priority>("normal");
+  const [selectedPriotiry, setSelectedPriority] = useState<Priority>("Normal");
 
   const handleAddTask = () => {
-    if (newTaskDescription.trim() === "") return;
+    if (newTaskDescription.trim() === "") {
+      Swal.fire({
+        icon: "error",
+        title: "¡Hey!",
+        timer: 1500,
+        text: "Debes ingresar una tarea",
+        showConfirmButton: false,
+      });
+    } else {
+      const newTask: Task = {
+        id: taskList.length + 1,
+        description: newTaskDescription,
+        priority: selectedPriotiry,
+      };
 
-    const newTask: Task = {
-      id: taskList.length + 1,
-      description: newTaskDescription,
-      priority: selectedPriotiry,
-    };
-
-    setTaskList([...taskList, newTask]);
-
-    setNewTaskDescription("");
+      Swal.fire({
+        icon: "success",
+        title: "Tarea agregada",
+        timer: 1500,
+        showConfirmButton: false,
+      });
+      setTaskList([...taskList, newTask]);
+      setNewTaskDescription("");
+    }
   };
 
   const handleDeleteTask = (index: number) => {
@@ -47,26 +70,26 @@ const TodoApp = () => {
         />
         <div className="dropdown">
           <select
-            className="btn btn-secondary dropdown-toggle"
+            className="btn btn-dark dropdown-toggle"
             value={selectedPriotiry}
             onChange={(e) => setSelectedPriority(e.target.value as Priority)}
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
             Prioridad
-            <option className="dropdown-item" value="normal">
+            <option className="dropdown-item" value="Normal">
               Normal
             </option>
-            <option className="dropdown-item" value="urgente">
+            <option className="dropdown-item" value="Urgente">
               Urgente
             </option>
-            <option className="dropdown-item" value="muy-urgente">
+            <option className="dropdown-item" value="Muy urgente">
               Muy urgente
             </option>
           </select>
         </div>
         <button
-          className="btn-add-task btn btn-primary btn-add"
+          className="btn-add-task btn btn-dark btn-add"
           onClick={handleAddTask}
         >
           Agregar tarea
