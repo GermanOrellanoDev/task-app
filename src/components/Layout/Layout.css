@@ -1,5 +1,11 @@
 .layout {
   display: flex;
   flex-direction: column;
-  padding-top: 5%;
+  padding: 5%;
+}
+
+@media (min-width: 768px) {
+  .layout {
+    padding: 2%; /* Reduce padding en pantallas grandes */
+  }
 }

@@ -4,4 +4,28 @@
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
+  margin: 0 auto;
+}
+
+/* Ajuste en pantallas pequeñas */
+@media (max-width: 768px) {
+  .task-list {
+    flex-direction: column; /* Coloca las tarjetas en columna */
+  }
+}
+
+/* Pantallas móvil M*/
+@media (min-width: 425px) {
+}
+
+/* Pantallas medianas (tablets) */
+@media (min-width: 576px) {
+}
+
+/* Pantallas grandes (laptops) */
+@media (min-width: 768px) {
+}
+
+/* Pantallas muy grandes (desktops) */
+@media (min-width: 1200px) {
 }

@@ -1,19 +1,31 @@
 .footer {
-  padding: 10% 0 10% 0;
-  font-size: 0.8rem;
+  padding: 5% 0; /* Ajusta padding para móviles */
+  font-size: 0.7rem; /* Tamaño más pequeño */
   display: flex;
+  flex-direction: row; /* Cambia la dirección para pantallas pequeñas */
   justify-content: center;
   align-items: center;
-  height: 30%;
-  margin-top: 5%;
+  height: auto;
 }
 
 .footer-p {
   color: #f0ffff;
-  margin: 10px 10px 10px 0;
+  margin: 10px 10px 10px 0; /* Ajuste vertical */
 }
 
 .logo-footer {
-  width: 30px;
-  height: 30px;
+  width: 20px; /* Tamaño menor en móviles */
+  height: 20px;
+}
+
+/* Media Query */
+@media (min-width: 768px) {
+  .footer {
+    flex-direction: row; /* Diseño horizontal en pantallas grandes */
+  }
+
+  .logo-footer {
+    width: 30px;
+    height: 30px;
+  }
 }
