@@ -26,7 +26,7 @@ const TodoApp = () => {
 
   const [selectedPriotiry, setSelectedPriority] = useState<Priority>("Normal");
 
-  const handleAddTask = () => {
+  const handleAddTask = (): void => {
     if (newTaskDescription.trim() === "") {
       Swal.fire({
         icon: "error",
@@ -53,7 +53,7 @@ const TodoApp = () => {
     }
   };
 
-  const handleDeleteTask = (index: number) => {
+  const handleDeleteTask = (index: number): void => {
     setTaskList((tasks) => tasks.filter((_, i) => i !== index));
   };
 
@@ -89,7 +89,7 @@ const TodoApp = () => {
           </select>
         </div>
         <button
-          className="btn-add-task btn btn-dark btn-add"
+          className="btn-add-task btn btn-primary btn-add"
           onClick={handleAddTask}
         >
           Agregar tarea
