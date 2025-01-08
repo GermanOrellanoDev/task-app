@@ -1,5 +1,6 @@
+/* Para pantallas pequeñas */
 .card {
-  width: 100%; /* Para pantallas pequeñas */
+  width: 100%;
   max-width: 300px;
   height: auto;
   margin: 3% 0 3% 0;
@@ -10,7 +11,7 @@
 }
 
 .btn-delete-task {
-  width: 100%; /* Botón a pantalla completa en dispositivos pequeños */
+  width: 80%;
   height: 40px;
   background-color: rgb(190, 40, 40);
   border: none;
@@ -20,24 +21,23 @@
 /* Pantallas medianas (tablets) */
 @media (min-width: 576px) {
   .card {
-    width: 70%; /* La tarjeta ocupa la mitad del ancho */
+    width: 43%;
+    margin: 3%;
   }
 }
 
 /* Pantallas grandes (laptops) */
 @media (min-width: 768px) {
   .card {
-    width: 30%; /* Ajusta a un tercio del contenedor */
-  }
-
-  .btn-delete-task {
-    width: 50%; /* Botón más pequeño */
+    width: 40%;
+    margin: 2%;
   }
 }
 
 /* Pantallas muy grandes (desktops) */
 @media (min-width: 1200px) {
   .card {
-    width: 20%; /* Diseño original para pantallas grandes */
+    width: 20%;
+    margin: 1%;
   }
 }

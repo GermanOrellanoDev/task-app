@@ -1,8 +1,8 @@
 .footer {
-  padding: 5% 0; /* Ajusta padding para móviles */
-  font-size: 0.7rem; /* Tamaño más pequeño */
+  padding: 5% 0;
+  font-size: 0.7rem;
   display: flex;
-  flex-direction: row; /* Cambia la dirección para pantallas pequeñas */
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   height: auto;
@@ -10,18 +10,17 @@
 
 .footer-p {
   color: #f0ffff;
-  margin: 10px 10px 10px 0; /* Ajuste vertical */
+  margin: 10px 10px 10px 0;
 }
 
 .logo-footer {
-  width: 20px; /* Tamaño menor en móviles */
+  width: 20px;
   height: 20px;
 }
 
-/* Media Query */
 @media (min-width: 768px) {
   .footer {
-    flex-direction: row; /* Diseño horizontal en pantallas grandes */
+    flex-direction: row;
   }
 
   .logo-footer {
