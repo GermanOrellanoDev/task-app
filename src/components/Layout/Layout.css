@@ -6,6 +6,6 @@
 
 @media (min-width: 768px) {
   .layout {
-    padding: 2%; /* Reduce padding en pantallas grandes */
+    padding: 2%;
   }
 }
