@@ -1,50 +1,71 @@
-# React + TypeScript + Vite
+# Task-App 📝
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Task-App** es una aplicación para la gestión de tareas, creada con **React** y **TypeScript**. Este proyecto utiliza **Bootstrap** para el diseño y **SweetAlert** para mostrar alertas interactivas.
 
-Currently, two official plugins are available:
+## Tabla de Contenidos 🗋
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Características](#características)
+- [Instalación](#instalación)
+- [Uso](#uso)
+- [Tecnologías Utilizadas](#tecnologías-utilizadas)
+- [Contribuciones](#contribuciones)
+- [Licencia](#licencia)
+- [Contacto](#contacto)
 
-## Expanding the ESLint configuration
+## Características ✨
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Añadir y eliminar tareas.
+- Interfaz amigable y diseño responsive con Bootstrap.
+- Alertas personalizadas para confirmaciones y mensajes (integración con SweetAlert).
 
-- Configure the top-level `parserOptions` property like this:
+## Instalación 🔧
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. Clona este repositorio:
+   ```bash
+   git clone https://github.com/GermanOrellanoDev/task-app.git
+   ```
+2. Ve al directorio del proyecto:
+   ```bash
+   cd task-app
+   ```
+3. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+4. Ejecuta la aplicación:
+   ```bash
+   npm run dev
+   ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Uso 🚀
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. Al iniciar, verás un formulario para agregar tareas.
+2. Las tareas pueden eliminarse fácilmente desde la lista.
+3. Las alertas aparecerán al realizar acciones importantes como crear o eliminar una tarea y/o si el campo está vacío.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Tecnologías Utilizadas 🛠️
+
+- **Frontend:** React, TypeScript.
+- **Diseño:** Bootstrap.
+- **Alertas:** SweetAlert.
+
+## Contribuciones 🤝
+
+¡Contribuciones son bienvenidas! Si deseas mejorar esta aplicación, sigue estos pasos:
+1. Haz un fork del proyecto.
+2. Crea una rama con tu feature o bugfix:
+   ```bash
+   git checkout -b nombre-rama
+   ```
+3. Realiza un pull request.
+
+## Licencia 📄
+
+Este proyecto está bajo la licencia **MIT**. Consulta el archivo `LICENSE` para más detalles.
+
+## Contacto 📨
+
+- Autor: [Germán](https://github.com/GermanOrellanoDev)
+- Email: gorellano.dev@gmail.com
+
+
